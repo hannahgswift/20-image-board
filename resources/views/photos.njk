@@ -1,47 +1,46 @@
 {% extends "master" %}
 
 {% block content %}
-<div class="app">
-  <div class="app__header">
-    <nav class="top-nav">
-      <div class="container__nav">
-        <button class="nav-btn" type="button" name="button"><i class="fa fa-plus-circle" aria-hidden="true"></i></button>
+  <div class="app">
+    <div class="app__header">
+      <nav class="top-nav">
+        <div class="container__nav">
+          <button class="nav-btn" type="button" name="button"><i class="fa fa-plus-circle" aria-hidden="true"></i></button>
+        </div>
+      </nav>
+    {# </div> #}
+
+      <div class="container__form">
+        <form class="form" action="/photos" method="post">
+          {{ csrfField }}
+
+          <div class="input-wrapper">
+            <input class="form-input" type="text" name="url" value="" placeholder="Image URL">
+            <textarea class="form-input" type="text" name="caption" value="" placeholder="Image Caption"></textarea>
+          </div>
+          <div class="btn-wrapper">
+            <button class="btn cancel-btn"type="clear" name="button">Cancel</button>
+            <button class="btn submit-btn"type="submit" name="button"><i class="fa fa-picture-o" aria-hidden="true"></i> Add Image</button>
+          </div>
+        </form>
       </div>
-    </nav>
-  {# </div> #}
+    </div>
 
-    <div class="container__form">
-      <form class="form" action="/photos" method="post">
-        {{ csrfField }}
-
-        <div class="input-wrapper">
-          <input class="form-input" type="text" name="url" value="" placeholder="Image URL">
-          <textarea class="form-input" type="text" name="caption" value="" placeholder="Image Caption"></textarea>
-        </div>
-        <div class="btn-wrapper">
-          <button class="btn cancel-btn"type="clear" name="button">Cancel</button>
-          <button class="btn submit-btn"type="submit" name="button"><i class="fa fa-picture-o" aria-hidden="true"></i> Add Image</button>
-        </div>
-      </form>
+    <div class="app__main">
+      <div class="container">
+        {% if name %}
+          <ul class="photos-list">
+            <li class="photos-list__item">
+              <div class="image-wrapper">
+                <img class="image" src="{{ url }}" alt="" />
+              </div>
+              <div class="caption-wrapper">
+                <span class="caption">{{ caption }}</span>
+              </div>
+            </li>
+          </ul>
+        {% endif %}
+      </div>
     </div>
   </div>
-
-  <div class="app__main">
-    <div class="container">
-      {# {% if name %} #}
-      <ul class="photos-list">
-        <li class="photos-list__item">
-          <div class="image-wrapper">
-            <img class="image" src="http://placekitten.com/600/600" alt="" />
-          </div>
-          <div class="caption-wrapper">
-            <span class="caption">What a kitten!</span>
-          </div>
-        </li>
-      </ul>
-      {# {% endif %} #}
-    </div>
-  </div>
-</div>
-
 {% endblock %}
