@@ -20,6 +20,7 @@
     "adonis-framework": "^3.0.0",
     "adonis-lucid": "^3.0.1",
     "adonis-middleware": "^1.0.6",
+    "pg": "^6.0.3",
     "youch": "^1.0.1"
   },
   "autoload": {
