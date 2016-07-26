@@ -11,7 +11,7 @@
     {# </div> #}
 
       <div class="container__form">
-        <form class="form" action="/photos" method="post">
+        <form class="form" action="/photos" method="POST">
           {{ csrfField }}
 
           <div class="input-wrapper">
@@ -28,7 +28,7 @@
 
     <div class="app__main">
       <div class="container">
-        {% if name %}
+        {# {% if name %} #}
           <ul class="photos-list">
             <li class="photos-list__item">
               <div class="image-wrapper">
@@ -39,7 +39,7 @@
               </div>
             </li>
           </ul>
-        {% endif %}
+        {# {% endif %} #}
       </div>
     </div>
   </div>
