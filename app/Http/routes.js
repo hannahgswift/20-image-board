@@ -16,6 +16,7 @@
 */
 
 const Route = use('Route');
+const Photo = use('App/Model/Photo');
 
 Route.on('/').render('welcome');
 
@@ -26,10 +27,11 @@ Route.get('/photos', function * (req, res) {
 });
 
 Route.post('/photos', function * (req, res) {
+  const Database = use('Database');
   const url = req.input('url');
   const caption = req.input('caption');
+  const photo = yield Photo.create({ url, caption });
 
   yield req.session.put({ url, caption });
-
   res.redirect('/photos');
 });
