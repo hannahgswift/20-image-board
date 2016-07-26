@@ -1,7 +1,139 @@
 // @import 'yoga';
 // @import 'normalize';
-
-// $fa-font-path: '//netdna.bootstrapcdn.com/font-awesome/4.3.0/fonts';
-// @import 'font-awesome';
+$fa-font-path: '//netdna.bootstrapcdn.com/font-awesome/4.3.0/fonts';
+@import 'font-awesome';
 @import 'box-sizing';
 @import 'adonis';
+$gutter: 1rem;
+$background-gray: #edeeef;
+$container-gray: #e0e1e2;
+$button-green: #17aa56;
+$button-gray: #b6b6b6;
+$nav-blue: #486d99;
+$nav-btn: #072137;
+
+body {
+  margin: 0;
+  background: light;
+}
+
+ul {
+  padding-left: 0;
+  list-style: none;
+}
+
+.app {
+  width: 100%;
+  height: 100vh;
+  background: $background-gray;
+  display: flex;
+  flex-direction: column;
+}
+
+.app__header {
+  background: #fff;
+}
+
+.top-nav {
+  background: $nav-blue;
+}
+
+.nav-btn {
+  color: $nav-btn;
+  border: none;
+  background: transparent;
+  font-size: 2rem;
+}
+
+.container__nav {
+  max-width: 60rem;
+  width: 100%;
+  margin: auto;
+}
+
+.container {
+  display: flex;
+  flex-direction: column;
+  margin: 0 auto;
+  max-width: 50rem;
+  width: 100%;
+  background: $container-gray;
+
+  &__form {
+    max-width: 50rem;
+    width: 100%;
+    margin: 0 auto;
+  }
+}
+
+.form {
+  padding: $gutter 0;
+}
+
+.input-wrapper {
+  display: flex;
+  flex-direction: column;
+}
+
+.form-input {
+  margin: 0.5rem 0;
+  padding: 0.5rem;
+  font-size: 1rem;
+}
+
+.btn-wrapper {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-end;
+  width: 100%;
+}
+
+.btn {
+  padding: $gutter;
+  border: 0;
+  border-radius: 0.5rem;
+  font-size: 1rem;
+  margin: 0.5rem;
+  margin-right: 0;
+  text-transform: uppercase;
+
+  &:hover {
+    cursor: pointer;
+  }
+}
+
+.cancel-btn {
+  background: $button-gray;
+  color: #fff;
+}
+
+.submit-btn {
+  background: $button-green;
+  color: #fff;
+}
+
+.photos-list {
+  margin: auto;
+}
+
+.photos-list__item {
+  width: 80%;
+}
+
+.image-wrapper {
+  width: 100%;
+}
+
+.image {
+  width: 100%;
+  height: auto;
+}
+
+.caption-wrapper {
+  padding: 2rem;
+  background: #ffffff;
+}
+
+.caption {
+  // padding: 3rem;
+}
