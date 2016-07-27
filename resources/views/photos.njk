@@ -28,18 +28,18 @@
 
     <div class="app__main">
       <div class="container">
-        {# {% if name %} #}
+        {% for photo in photos %}
           <ul class="photos-list">
             <li class="photos-list__item">
               <div class="image-wrapper">
-                <img class="image" src="{{ url }}" alt="" />
+                <img class="image" src="{{ photo.url }}" alt="" />
               </div>
               <div class="caption-wrapper">
-                <span class="caption">{{ caption }}</span>
+                <span class="caption">{{ photo.caption }}</span>
               </div>
             </li>
           </ul>
-        {# {% endif %} #}
+        {% endfor %}
       </div>
     </div>
   </div>
