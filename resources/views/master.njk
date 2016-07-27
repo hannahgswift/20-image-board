@@ -29,5 +29,17 @@
       {% endblock %}
     </div><!-- end wrapper -->
   </section>
+  <script type="text/javascript">
+
+    const button = document.querySelector('.toggle-button');
+    const form = document.querySelector('.container__form');
+
+    button.addEventListener('click', () => {
+      form.classList.toggle('active');
+    });
+
+  </script>
 </body>
+
+
 </html>

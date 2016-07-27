@@ -51,6 +51,7 @@ ul {
   }
 }
 
+
 .container__nav {
   width: 100%;
   max-width: 60rem;
@@ -68,8 +69,14 @@ ul {
   &__form {
     width: 100%;
     max-width: 50rem;
+    height: 35vh;
     margin: 0 auto;
   }
+}
+
+.active {
+  height: 0;
+  overflow: hidden;
 }
 
 .form {
