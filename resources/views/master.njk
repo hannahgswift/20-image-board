@@ -6,7 +6,7 @@
   <title>AdonisJs - Node.Js MVC Framework</title>
   <link href='http://fonts.googleapis.com/css?family=Source+Sans+Pro:400,200,300,600,700,900' rel='stylesheet' type='text/css'>
   <link rel="icon" href="/assets/favicon.png" type="image/x-icon">
-  <link rel="stylesheet" type="text/css" href="style.css">
+  <link rel="stylesheet" type="text/css" href="/dist/app.css">
 </head>
 <body>
 
@@ -16,7 +16,7 @@
       {% endblock %}
 
       {% block footer %}
-        <div class="__footer">
+        {# <div class="__footer">
           <ul>
             <li>
               <a href="https://twitter.com/intent/tweet?url=http://adonisjs.com&text=I am using AdonisJs, a practical MVC framework for nodejs&hashtags=nodejs,adonisframework" target="_blank"><img src="/assets/twitter.svg"></a>
@@ -25,9 +25,21 @@
               <a href="https://github.com/adonisjs/adonis-framework" target="_blank"><img src="/assets/github.svg"></a>
             </li>
           </ul>
-        </div>
+        </div> #}
       {% endblock %}
     </div><!-- end wrapper -->
   </section>
+  <script type="text/javascript">
+
+    const button = document.querySelector('.toggle-button');
+    const form = document.querySelector('.container__form');
+
+    button.addEventListener('click', () => {
+      form.classList.toggle('active');
+    });
+
+  </script>
 </body>
+
+
 </html>
